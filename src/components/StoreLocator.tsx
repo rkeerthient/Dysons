@@ -18,7 +18,9 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 const StoreLocator = (): JSX.Element => {
   const searchActions = useSearchActions();
-    
+  useEffect(() => {
+    searchActions.executeVerticalQuery();
+  }, []);
   const handleFilterSelect = (params: OnSelectParams) => {
     const locationFilter: SelectableStaticFilter = {
       selected: true,
@@ -66,3 +68,6 @@ const StoreLocator = (): JSX.Element => {
 };
 
 export default StoreLocator;
+function useEffect(arg0: () => void, arg1: never[]) {
+  throw new Error("Function not implemented.");
+}
