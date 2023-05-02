@@ -1,9 +1,6 @@
 import { Image } from "@yext/pages/components";
 import { CardProps } from "@yext/search-ui-react";
 import * as React from "react";
-import Ce_vacuums from "../../types/floor_care";
-import Ce_hairCare from "../../types/hair_care";
-import Ce_lighting from "../../types/lighting";
 import Ce_sparesAndAccessories from "../../types/spares_and_accessories";
 import RTF from "../RTF";
 
@@ -13,7 +10,7 @@ const AccessoriesCard = (props: CardProps<Ce_sparesAndAccessories>) => {
 
   return (
     <div className="relative border bg-white">
-      <div className="group bg-zinc-100 aspect-h-7 aspect-w-10 block w-full overflow-hidden  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+      <div className="group  aspect-h-7 aspect-w-10 block w-full overflow-hidden  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
         {photo && (
           <div className="h-44">
             <Image className="!h-full" image={photo}></Image>
@@ -21,7 +18,7 @@ const AccessoriesCard = (props: CardProps<Ce_sparesAndAccessories>) => {
         )}
       </div>
       <div className="px-6 py-4 h-40">
-        <p className="pointer-events-none mt-2 block font-medium text-gray-900 text-xl mt-4">
+        <p className="pointer-events-none  block font-medium text-gray-900 text-xl mt-4">
           {result.name}
         </p>
         <p className="pointer-events-none block text-base font-light mt-4 ">

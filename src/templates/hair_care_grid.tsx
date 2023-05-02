@@ -22,6 +22,8 @@ import * as React from "react";
 import PageLayout from "../components/page-layout";
 import SearchResults from "../components/SearchResults";
 import "../index.css";
+import { CardProps } from "@yext/answers-react-components";
+import HairCareCard from "../components/Cards/HairCareCard";
 
 export const config: TemplateConfig = {
   name: "hair-care",
@@ -45,7 +47,11 @@ const HairCare: Template<TemplateRenderProps> = (data) => {
 
   return (
     <PageLayout _site={_site} verticalKey="hair_care">
-      <SearchResults verticalKey="hair_care"></SearchResults>
+      <SearchResults
+        verticalKey="hair_care"
+        cardType={HairCareCard}
+        resultsCss={"grid grid-cols-3 gap-6"}
+      ></SearchResults>
     </PageLayout>
   );
 };

@@ -1,7 +1,6 @@
 import { Image } from "@yext/pages/components";
 import { CardProps } from "@yext/search-ui-react";
 import * as React from "react";
-import Ce_vacuums from "../../types/floor_care";
 import Ce_hairCare from "../../types/hair_care";
 import RTF from "../RTF";
 
@@ -24,7 +23,7 @@ const HairCareCard = (props: CardProps<Ce_hairCare>) => {
         )}
       </div>
       <div className="px-6 py-4 h-80">
-        <p className="pointer-events-none mt-2 block font-medium text-gray-900 text-xl mt-4">
+        <p className="pointer-events-none block font-medium text-gray-900 text-xl mt-4">
           {result.name}
         </p>
         <p className="pointer-events-none block text-base font-light mt-4 ">

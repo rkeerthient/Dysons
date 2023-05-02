@@ -21,6 +21,8 @@ import * as React from "react";
 import PageLayout from "../components/page-layout";
 import SearchResults from "../components/SearchResults";
 import "../index.css";
+import { CardProps } from "@yext/answers-react-components";
+import AccessoriesCard from "../components/Cards/AccessoriesCard";
 
 export const config: TemplateConfig = {
   name: "accessories",
@@ -44,7 +46,11 @@ const FloorCare: Template<TemplateRenderProps> = (data) => {
 
   return (
     <PageLayout _site={_site} verticalKey="spares_and_accessories">
-      <SearchResults verticalKey="spares_and_accessories"></SearchResults>
+      <SearchResults
+        verticalKey="spares_and_accessories"
+        cardType={AccessoriesCard}
+        resultsCss={"grid grid-cols-3 gap-6"}
+      ></SearchResults>
     </PageLayout>
   );
 };

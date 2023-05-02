@@ -23,6 +23,8 @@ import PageLayout from "../components/page-layout";
 import SearchResults from "../components/SearchResults";
 import "../index.css";
 import Ce_vacuums from "../types/floor_care";
+import { CardProps } from "@yext/answers-react-components";
+import FloorCareCard from "../components/Cards/FloorCareCard";
 
 export const config: TemplateConfig = {
   name: "floor-care",
@@ -46,7 +48,11 @@ const FloorCare: Template<TemplateRenderProps> = (data) => {
 
   return (
     <PageLayout _site={_site} verticalKey="floor_care">
-      <SearchResults verticalKey="floor_care"></SearchResults>
+      <SearchResults
+        verticalKey="floor_care"
+        cardType={FloorCareCard}
+        resultsCss={"grid grid-cols-3 gap-6"}
+      ></SearchResults>
     </PageLayout>
   );
 };

@@ -49,6 +49,12 @@ const Header = () => {
               <li>
                 <a href="/accessories">Spares and accessories</a>
               </li>
+              <li>
+                <a href="/help_articles">Help Articles</a>
+              </li>
+              <li>
+                <a href="/environmental_control">Environmental Control</a>
+              </li>
             </ul>
           </nav>
         </div>

@@ -21,15 +21,14 @@ import * as React from "react";
 import PageLayout from "../components/page-layout";
 import SearchResults from "../components/SearchResults";
 import "../index.css";
-import { CardProps } from "@yext/answers-react-components";
-import LightingCard from "../components/Cards/LightingCard";
+import HelpArticlesCard from "../components/Cards/HelpArticlesCard";
 
 export const config: TemplateConfig = {
-  name: "lighting",
+  name: "help_articles",
 };
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return "lighting";
+  return "help_articles";
 };
 
 export const getHeadConfig: GetHeadConfig<
@@ -41,18 +40,18 @@ export const getHeadConfig: GetHeadConfig<
     viewport: "width=device-width, initial-scale=1",
   };
 };
-const FloorCare: Template<TemplateRenderProps> = (data) => {
+const HelpArticles: Template<TemplateRenderProps> = (data) => {
   const { _site } = data.document;
 
   return (
-    <PageLayout _site={_site} verticalKey="lighting">
+    <PageLayout _site={_site} verticalKey="help_articles">
       <SearchResults
-        verticalKey="lighting"
-        cardType={LightingCard}
-        resultsCss={"grid grid-cols-3 gap-6"}
+        verticalKey="help_articles"
+        cardType={HelpArticlesCard}
+        resultsCss={""}
       ></SearchResults>
     </PageLayout>
   );
 };
 
-export default FloorCare;
+export default HelpArticles;

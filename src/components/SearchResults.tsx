@@ -5,21 +5,20 @@ import {
   Pagination,
   ResultsCount,
   SearchBar,
-  StandardCard,
   StandardFacets,
   VerticalResults,
 } from "@yext/search-ui-react";
 import * as React from "react";
 import { useEffect } from "react";
 import AccessoriesCard from "./Cards/AccessoriesCard";
-import ProductCard from "./Cards/FloorCareCard";
-import HairCareCard from "./Cards/HairCareCard";
-import LightingCard from "./Cards/LightingCard";
+import { CardComponent } from "@yext/answers-react-components";
 
 type Props = {
   verticalKey?: string;
+  cardType: CardComponent;
+  resultsCss: string;
 };
-const SearchResults = ({ verticalKey }: Props) => {
+const SearchResults = ({ verticalKey, cardType, resultsCss }: Props) => {
   const searchActions = useSearchActions();
   useEffect(() => {
     verticalKey
@@ -28,7 +27,7 @@ const SearchResults = ({ verticalKey }: Props) => {
       : searchActions.executeUniversalQuery;
   }, []);
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mt-4">
       <SearchBar hideRecentSearches={true} />
       <div className="flex">
         <div className="w-56 shrink-0 mr-5">
@@ -40,9 +39,9 @@ const SearchResults = ({ verticalKey }: Props) => {
             <AppliedFilters />
           </div>
           <VerticalResults
-            CardComponent={AccessoriesCard}
+            CardComponent={cardType}
             customCssClasses={{
-              verticalResultsContainer: "grid grid-cols-3 gap-6",
+              verticalResultsContainer: resultsCss,
             }}
           />
           <Pagination customCssClasses={{ paginationContainer: "mt-4" }} />
