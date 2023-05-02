@@ -1,5 +1,4 @@
 import * as React from "react";
-import Cta from "../components/cta";
 
 type Link = {
   label: string;
@@ -14,6 +13,10 @@ const links: Link[] = [
   {
     label: "About",
     url: "/turtlehead-tacos",
+  },
+  {
+    label: "locator",
+    url: "/locator",
   },
 ];
 
@@ -30,8 +33,7 @@ const Header = () => {
     <div className="w-full bg-black">
       <div className="centered-container">
         <div className="py-6   items-center justify-between">
-          Hi
-          {/* <img
+          <img
             src="https://www.dyson.com/etc.clientlibs/dyson/clientlibs/clientlib-main/resources/images/dyson-logo.svg"
             width="50"
             height="50"
@@ -57,7 +59,7 @@ const Header = () => {
                 <a href="/environmental_control">Environmental Control</a>
               </li>
             </ul>
-          </nav> */}
+          </nav>
         </div>
       </div>
     </div>
