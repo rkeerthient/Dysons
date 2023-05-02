@@ -58,6 +58,9 @@ const Header = () => {
               <li>
                 <a href="/environmental_control">Environmental Control</a>
               </li>
+              <li>
+                <a href="/locator">Locator</a>
+              </li>
             </ul>
           </nav>
         </div>
