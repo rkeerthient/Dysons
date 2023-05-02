@@ -17,11 +17,8 @@ import StoreLocator from "../components/StoreLocator";
 import PageLayout from "../components/page-layout";
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return "locator";
+  return `locator`;
 };
-// export const config: TemplateConfig = {
-//   name: "locator",
-// };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = () => {
   return {
